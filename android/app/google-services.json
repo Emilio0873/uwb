@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "64775474395",
+    "project_id": "uwbb-7e623",
+    "storage_bucket": "uwbb-7e623.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64775474395:android:6fa5f36f6ed9f951cb50fe",
+        "android_client_info": {
+          "package_name": "com.example.chabot_uwb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzXTmEUrYq4z3rYF_hX6IGE7w3pVZms6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64775474395:android:ce9455696ba6b657cb50fe",
+        "android_client_info": {
+          "package_name": "com.example.tokomi_wapi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzXTmEUrYq4z3rYF_hX6IGE7w3pVZms6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64775474395:android:b0eeee341b93c458cb50fe",
+        "android_client_info": {
+          "package_name": "com.example.uwb_info"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzXTmEUrYq4z3rYF_hX6IGE7w3pVZms6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
