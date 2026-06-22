@@ -1,0 +1,4 @@
+=== ÉTUDIANTS ===
+- Consultation des notes : Les notes sont publiées sur le portail étudiant 2 semaines après la fin des examens.
+- Réclamations : Toute réclamation doit être déposée au décanat dans les 48h suivant la publication.
+- Bibliothèque : Accès gratuit avec la carte d'étudiant valide.

@@ -1,0 +1,3 @@
+=== AGENT CONTRÔLE DE DOSSIER ===
+- Vérification : Contrôle approfondi de l'authenticité des documents fournis lors de l'inscription.
+- Archivage : Responsable de la numérisation des dossiers validés.

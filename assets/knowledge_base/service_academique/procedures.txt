@@ -1,0 +1,4 @@
+=== SERVICE ACADÉMIQUE ===
+- Calendrier : Responsable de la fixation des dates de sessions d'examens.
+- Diplômes : La remise des diplômes a lieu annuellement le 30 juillet.
+- Horaires : Valide les horaires des professeurs chaque mois.

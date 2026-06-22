@@ -1,0 +1,4 @@
+=== AGENTS INSCRIPTION ===
+- Validation des dossiers : Vérifier l'original du diplôme d'état et 4 photos passeport.
+- Inscription tardive : Une pénalité de 10% s'applique après le 15 novembre.
+- Quotas : Ne pas dépasser 150 étudiants par auditoire en L1.

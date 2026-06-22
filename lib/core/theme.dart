@@ -55,13 +55,13 @@ class AppTheme {
   static ThemeData get darkTheme {
     return ThemeData(
       brightness: Brightness.dark,
-      primaryColor: AppConstants.secondaryColor, // Use Yellow as primary in dark mode for contrast
+      primaryColor: AppConstants.secondaryColor, // Sky Blue primary in dark mode
       scaffoldBackgroundColor: Colors.black,
       cardColor: const Color(0xFF121212),
       dividerColor: Colors.white10,
       colorScheme: const ColorScheme.dark(
-        primary: AppConstants.secondaryColor, // Yellow
-        secondary: Color(0xFF1E3A8A), // Deep Blue as accent
+        primary: AppConstants.secondaryColor, // Sky Blue
+        secondary: AppConstants.primaryColor, // Vibrant Blue as accent
         surface: Color(0xFF121212),
         background: Colors.black,
         onPrimary: Colors.black,
@@ -76,7 +76,7 @@ class AppTheme {
       ),
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.black,
-        foregroundColor: AppConstants.secondaryColor, // Gold/Yellow title
+        foregroundColor: AppConstants.secondaryColor, // Sky Blue title
         elevation: 0,
         centerTitle: true,
       ),

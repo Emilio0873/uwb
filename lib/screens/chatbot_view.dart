@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import '../core/constants.dart';
 import '../providers/app_provider.dart';
 import '../providers/chat_provider.dart';
+import 'package:speech_to_text/speech_to_text.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class ChatbotView extends StatefulWidget {
   const ChatbotView({super.key});
@@ -15,6 +17,58 @@ class ChatbotView extends StatefulWidget {
 class _ChatbotViewState extends State<ChatbotView> {
   final TextEditingController _controller = TextEditingController();
   final ScrollController _scrollController = ScrollController();
+  final SpeechToText _speechToText = SpeechToText();
+  bool _speechEnabled = false;
+  bool _isListening = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _initSpeech();
+  }
+
+  void _initSpeech() async {
+    try {
+      _speechEnabled = await _speechToText.initialize(
+        onStatus: (status) {
+          if (status == 'done' || status == 'notListening') {
+            setState(() => _isListening = false);
+          }
+        },
+        onError: (errorNotification) {
+          setState(() => _isListening = false);
+          print('Speech error: $errorNotification');
+        },
+      );
+    } catch (e) {
+      print('Speech init error: $e');
+    }
+    setState(() {});
+  }
+
+  void _startListening() async {
+    var status = await Permission.microphone.status;
+    if (status.isDenied) {
+      status = await Permission.microphone.request();
+    }
+
+    if (status.isGranted) {
+      await _speechToText.listen(
+        onResult: (result) {
+          setState(() {
+            _controller.text = result.recognizedWords;
+          });
+        },
+        localeId: 'fr_FR',
+      );
+      setState(() => _isListening = true);
+    }
+  }
+
+  void _stopListening() async {
+    await _speechToText.stop();
+    setState(() => _isListening = false);
+  }
 
   void _sendMessage() async {
     final text = _controller.text.trim();
@@ -26,7 +80,7 @@ class _ChatbotViewState extends State<ChatbotView> {
     final language = appProvider.currentLanguage;
 
     _controller.clear();
-    await chatProvider.sendMessage(text, role, language);
+    await chatProvider.sendMessage(text, role, language, userName: appProvider.fullName);
     _scrollToBottom();
   }
 
@@ -125,23 +179,70 @@ class _ChatbotViewState extends State<ChatbotView> {
                 ),
               ),
               Expanded(
-                child: ListView.builder(
-                  controller: _scrollController,
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
-                  itemCount: chatProvider.messages.length,
-                  itemBuilder: (context, index) {
-                    final message = chatProvider.messages[index];
-                    final isUser = message['role'] == 'user';
-                    return _buildMessageBubble(message['content']!, isUser, isDark);
-                  },
-                ),
+                child: chatProvider.messages.isEmpty
+                    ? Center(
+                        child: SingleChildScrollView(
+                          child: Padding(
+                            padding: const EdgeInsets.all(32.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(20),
+                                  decoration: BoxDecoration(
+                                    color: AppConstants.primaryColor.withOpacity(0.05),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Image.asset(
+                                    'assets/images/uwb.png',
+                                    height: 100,
+                                  ),
+                                ),
+                                const SizedBox(height: 32),
+                                Text(
+                                  'Comment puis-je vous aider ?',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.bold,
+                                    color: isDark ? Colors.white : AppConstants.textPrimaryColor,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                const SizedBox(height: 12),
+                                Text(
+                                  'Posez vos questions sur l\'Université de l\'UWB\net notre Assistant IA vous répondra instantanément.',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: isDark ? Colors.grey[400] : AppConstants.textSecondaryColor,
+                                    height: 1.5,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                const SizedBox(height: 40),
+                                _buildCenteredInput(chatProvider, isDark),
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                    : ListView.builder(
+                        controller: _scrollController,
+                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+                        itemCount: chatProvider.messages.length,
+                        itemBuilder: (context, index) {
+                          final message = chatProvider.messages[index];
+                          final isUser = message['role'] == 'user';
+                          return _buildMessageBubble(message['content']!, isUser, isDark);
+                        },
+                      ),
               ),
               if (chatProvider.isLoading)
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 8.0),
                   child: SpinKitThreeBounce(color: AppConstants.primaryColor, size: 20),
                 ),
-              _buildMessageInput(chatProvider, isDark),
+              if (chatProvider.messages.isNotEmpty)
+                _buildMessageInput(chatProvider, isDark),
             ],
           ),
         ],
@@ -211,6 +312,68 @@ class _ChatbotViewState extends State<ChatbotView> {
     );
   }
 
+  Widget _buildCenteredInput(ChatProvider chatProvider, bool isDark) {
+    return Container(
+      constraints: const BoxConstraints(maxWidth: 600),
+      decoration: BoxDecoration(
+        color: isDark ? Colors.grey[900] : Colors.white,
+        borderRadius: BorderRadius.circular(30),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 20,
+            offset: const Offset(0, 10),
+          ),
+        ],
+        border: Border.all(color: isDark ? Colors.grey[800]! : Colors.grey.shade200, width: 1.5),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: TextField(
+              controller: _controller,
+              enabled: !chatProvider.isLoading,
+              decoration: const InputDecoration(
+                hintText: 'Posez votre question ici...',
+                border: InputBorder.none,
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
+                filled: false,
+                contentPadding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+              ),
+              style: TextStyle(fontSize: 17, color: isDark ? Colors.white : Colors.black),
+              textInputAction: TextInputAction.send,
+              onSubmitted: (_) => _sendMessage(),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                if (_speechEnabled)
+                  IconButton(
+                    onPressed: _isListening ? _stopListening : _startListening,
+                    icon: Icon(
+                      _isListening ? Icons.mic : Icons.mic_none,
+                      color: _isListening ? Colors.red : AppConstants.primaryColor,
+                    ),
+                  ),
+                FloatingActionButton(
+                  mini: true,
+                  onPressed: chatProvider.isLoading ? null : _sendMessage,
+                  backgroundColor: AppConstants.primaryColor,
+                  elevation: 0,
+                  child: const Icon(Icons.send, color: Colors.white, size: 20),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildMessageInput(ChatProvider chatProvider, bool isDark) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
@@ -249,6 +412,16 @@ class _ChatbotViewState extends State<ChatbotView> {
                   style: TextStyle(fontSize: 16, color: isDark ? Colors.white : Colors.black),
                   textInputAction: TextInputAction.send,
                   onSubmitted: (_) => _sendMessage(),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 4.0),
+                child: IconButton(
+                  onPressed: _isListening ? _stopListening : _startListening,
+                  icon: Icon(
+                    _isListening ? Icons.mic : Icons.mic_none,
+                    color: _isListening ? Colors.red : AppConstants.primaryColor,
+                  ),
                 ),
               ),
               Padding(

@@ -1,0 +1,3 @@
+=== AUTRES ===
+- Accueil : Fournir les informations générales sur l'Université William Booth.
+- Orientation : Diriger les visiteurs vers les services appropriés.

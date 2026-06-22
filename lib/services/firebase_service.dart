@@ -21,6 +21,8 @@ class FirebaseService {
     required String password,
     required String fullName,
     required String role,
+    String? faculte,
+    String? promotion,
   }) async {
     final credential = await _auth.createUserWithEmailAndPassword(
       email: email,
@@ -34,6 +36,8 @@ class FirebaseService {
         'full_name': fullName,
         'role': role,
         'email': email,
+        if (faculte != null) 'faculte': faculte,
+        if (promotion != null) 'promotion': promotion,
         'updated_at': FieldValue.serverTimestamp(),
       });
     }

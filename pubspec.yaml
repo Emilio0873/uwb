@@ -41,6 +41,8 @@ dependencies:
   provider: ^6.1.5+1
   google_fonts: ^8.1.0
   flutter_spinkit: ^5.2.2
+  speech_to_text: ^7.4.0
+  permission_handler: ^12.0.3
 
 dev_dependencies:
   flutter_test:
@@ -67,7 +69,14 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-    - assets/knowledge_base/
+    - assets/knowledge_base/etudiant/
+    - assets/knowledge_base/rectorat/
+    - assets/knowledge_base/service_academique/
+    - assets/knowledge_base/decanat/
+    - assets/knowledge_base/agent_inscription/
+    - assets/knowledge_base/agent_finance/
+    - assets/knowledge_base/agent_controle_dossier/
+    - assets/knowledge_base/autres/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

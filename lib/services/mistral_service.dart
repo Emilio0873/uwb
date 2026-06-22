@@ -9,14 +9,17 @@ class MistralService {
   String _knowledgeBaseContent = "";
   List<Map<String, String>> conversationHistory = [];
   String _userRole = "etudiant";
+  String _userName = "l'utilisateur";
   String _language = "Français";
 
   // System prompt to restrict answers based on role and knowledge base
   String get _systemPrompt => '''
 Tu es un assistant universitaire intelligent pour l'Université William Booth. 
 Ton rôle actuel est d'assister un utilisateur ayant le rôle suivant : $_userRole.
+L'utilisateur s'appelle : $_userName.
 
 IMPORTANT : Tu dois répondre EXCLUSIVEMENT en $_language.
+Tu dois t'adresser à l'utilisateur par son nom ($_userName) de manière naturelle et polie quand c'est approprié.
 Si l'utilisateur change la langue du système, tes prochaines réponses doivent être en $_language.
 
 INSTRUCTIONS CRUCIALES :
@@ -31,14 +34,24 @@ DOCUMENTS OFFICIELS :
 $_knowledgeBaseContent
 ''';
 
-  Future<void> initializeKnowledgeBase(String role, String language) async {
+  Future<void> initializeKnowledgeBase(String role, String language, {String? userName}) async {
     _userRole = role;
     _language = language;
+    if (userName != null && userName.isNotEmpty) {
+      _userName = userName;
+    }
+    
+    // Normalisation du nom de dossier pour le rôle
+    String roleFolder = role.toLowerCase().trim()
+                             .replaceAll(' ', '_')
+                             .replaceAll('é', 'e')
+                             .replaceAll('ô', 'o');
+    
     try {
-      final presentation = await rootBundle.loadString('assets/knowledge_base/presentation.txt');
-      final frais = await rootBundle.loadString('assets/knowledge_base/frais.txt');
-      final calendrier = await rootBundle.loadString('assets/knowledge_base/calendrier.txt');
-      final roles = await rootBundle.loadString('assets/knowledge_base/roles_procedures.txt');
+      final presentation = await rootBundle.loadString('assets/knowledge_base/$roleFolder/presentation.txt');
+      final frais = await rootBundle.loadString('assets/knowledge_base/$roleFolder/frais.txt');
+      final calendrier = await rootBundle.loadString('assets/knowledge_base/$roleFolder/calendrier.txt');
+      final specificProcedures = await rootBundle.loadString('assets/knowledge_base/$roleFolder/procedures.txt');
       
       _knowledgeBaseContent = """
 === PRESENTATION ===
@@ -50,21 +63,26 @@ $frais
 === CALENDRIER ===
 $calendrier
 
-=== PROCÉDURES ET RÔLES ===
-$roles
+=== PROCÉDURES SPÉCIFIQUES ($_userRole) ===
+$specificProcedures
 """;
       
       clearHistory(); 
     } catch (e) {
-      print("Erreur de chargement de la base de connaissances : $e");
-      clearHistory();
+      print("Erreur de chargement de la base de connaissances pour $roleFolder: $e");
+      // Fallback vers 'autres' si le dossier n'existe pas
+      if (roleFolder != 'autres') {
+        initializeKnowledgeBase('autres', language);
+      } else {
+        clearHistory();
+      }
     }
   }
 
-  Future<String> sendMessage(String message, {String role = "etudiant", String language = "Français"}) async {
-    // S'assurer que le système est initialisé avec le bon rôle et la bonne langue
-    if (conversationHistory.isEmpty || _userRole != role || _language != language) {
-      await initializeKnowledgeBase(role, language);
+  Future<String> sendMessage(String message, {String role = "etudiant", String language = "Français", String? userName}) async {
+    // S'assurer que le système est initialisé avec le bon rôle, la bonne langue et le bon nom
+    if (conversationHistory.isEmpty || _userRole != role || _language != language || (userName != null && _userName != userName)) {
+      await initializeKnowledgeBase(role, language, userName: userName);
     }
 
     conversationHistory.add({'role': 'user', 'content': message});
@@ -89,10 +107,10 @@ $roles
         conversationHistory.add({'role': 'assistant', 'content': reply});
         return reply;
       } else {
-        return "Désolé, je rencontre des difficultés techniques. Code d'erreur : ${response.statusCode}";
+        return "Une erreur technique s'est produite (code: ${response.statusCode}). Nos équipes ont été informées et travaillent à la résolution du problème.";
       }
     } catch (e) {
-      return "Une erreur de connexion est survenue. Veuillez vérifier votre connexion internet.";
+      return "Connexion interrompue. Veuillez vérifier votre accès à Internet et réessayer.";
     }
   }
   

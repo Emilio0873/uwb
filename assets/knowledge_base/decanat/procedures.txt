@@ -1,0 +1,4 @@
+=== DÉCANAT ===
+- Gestion des professeurs : Les horaires sont validés chaque mois par le service académique.
+- Rapports : Un rapport mensuel sur l'assiduité des étudiants est requis pour chaque faculté.
+- Réclamations : Reçoit les réclamations des étudiants après la publication des notes.

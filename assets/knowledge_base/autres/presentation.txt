@@ -1,0 +1,223 @@
+CHAPITRE III. ANALYSE DES BESOINS
+III.1. Présentation l’université William Booth
+L’armée du salut en R.D. Congo possède depuis des années, une riche infrastructure culturelle composé de grandes parties des complexes tels que : collège JOHN MABUIDI (ex institue du Kasaï), le collège BIMUALA etc.
+En 1995, quelques salutistes du Congo se mobilisent pour doter leur église d’un haut lieu du savoir, ou les enseignements seraient dispensés à toutes les personnes sans distinction de classe, de race, de tribut, d’appartenance politique, ni de religion.
+En date du 06/01/1996, répond favorablement à cette sollicitation, l’autorité numéro un, le chef mondial de l’armée du salut d’alors intéressé par le projet de création d’une université salutiste ainsi qu’il ouvrit ses portes le 10/11/1996 aussi l’état congolaise(ZAIRE) le reconnait-elle par :
+ 	L’arrêté ministériel N°EDN/CAB-MIN/ESU/0045/95 de la 31/12/1997 portante autorisation d’un établissement privé d’enseignement supérieur et universitaire dénommé « U.W.B » avec sa prestigieuse devise « DIGNITE, HONNEUR, EXCELLENCE 
+ 	Arrêté N°MIN DUC/CAB MINE/ESU/2000, DU01Mai2000 portant agrément provisoire d’un établissement privé d’enseignement supérieur et universitaire dénommé « U.W.B »
+ 	Arrêté ministériel N°MINEDUC/CABMINESU/0332/2002 de la 13/08/2002 portante approbation de programme et b équivalences de niveau d’études universitaire.
+ 	Le décret N°06/0106/du12/juin 2006 portant agrément de quelque établissement privé d’enseignement supérieur et universitaire, dont l’U.W. B
+III.1.1. Situation géographique
+L’université William Booth est située sur l’avenue du Kasaï numéro 12 dans la commune de la Gombe en face de l’ambassade du Portugal, derrière le grand-marché de Kinshasa.
+III.1.2. Objectifs et mission de l’institution.
+III.1.2.1.Objectifs
+L’épanouissement d’une population dans le monde s’associe au développement de l’environnement. D’où pour en remédier, la population doit être armée scientifiquement avec des méthodes et techniques appropriées.
+C’est dans cet angle que l’U.W. B, qui est l’une des universités d’enseignement fonctionnant dans l’objectif de former et d’encadrer la jeunesse congolaise, a le devoir d’accompagner jusqu’à faire d’eux des cadres qui peuvent prendre la relève des institutions et ainsi à contribuer à la révolution de la modernité.
+III.1.2.2. Mission
+L’université William Booth a pour mission :
+ 	Favoriser, promouvoir et encourager la recherche scientifique fondamentale et appliquée orientée vers les problèmes spécifiques de notre pays et de notre continent ; 
+ 	Cultiver la science à partir des valeurs matérielles, morales et spirituelles reconnues comme fondamentales pour le progrès de tout le peuple ;
+ 	Former des hommes ouverts aux autres ayant le souci d’exercer une responsabilité sociale dans le développement de leur pays et de l’humanité.
+
+
+ 
+III.1.3. Organigramme général du système d’information.
+ 
+III.1.4. Organigramme spécifique
+ 
+ 
+III.1.5. Description des postes
+Nous allons dans cette partie, définir les attributions de chaque poste de l’organigramme spécifique. 
+1.	Etudiant
+Il doit être muni de son carnet et son reçu d’enrôlement, puis il passe son examen et remet la copie de l’examen auprès du surveillant et signe son carnet.
+2.	Surveillant 
+Réceptionne et vérifie le reçu et carnet de l’étudiant, il classe la copie de l’examen et signe le carnet. Il codifie et distribue des copie d’examen et récupère la copie de l’examen. 
+3.	Secrétaire académique
+ 	Réceptionne le carnet et demande l’exemplaire d’examen et polycopie des examens à plusieurs exemplaires.
+ 	Réceptionne des copies déchiffrées et élabore la fiche des côtes.
+ 	Réceptionne la grille de délibération et élabore le relevé des côtes
+ 	Affiche et remise de résultat.
+
+4.	Equitants
+Réceptionne et classe des copies d’examens, il déchiffre de code dans les copies d’examen
+5.	Enseignement
+Composition des Interrogations, Travaux pratiques et examen, réceptionne et corrige les interrogations, Travaux pratiques et les examens codifiés.
+Il calcule et débat sur la délibération dans la fiche de délibération et il élabore des Grilles de délibération.
+6.	Recteur.
+Il réceptionne des fiches de cotation, il convoque la délibération et signe.
+III.1.6. Analyse des moyens de traitement utilises
+Les moyens de traitements à étudier sont :
+1. Les moyens humaines
+Poste	Nombre de personne	Niveau d’études	ancienneté
+Recteur
+Doyen de faculté
+Appariteur central
+professeur
+assistants	1
+1
+1
+1                       1	Docteur
+Docteur
+Licencié
+Docteur                            Licencié	-
+-
+-
+
+2. Les moyens matériels
+Le service académique dans son secteur des délibérations des étudiants utilise les outils suivants :
+ 	Un ordinateur
+ 	Trois Imprimantes
+ 	Une machine à écrire
+
+III.2. Besoins des utilisateurs 
+III.2.1. Introduction
+Les utilisateurs ont pour rôle la mise en correspondance avec les fonctions permanentes du développement du produit réalisé. Ces derniers peuvent représenter différents niveaux : décideurs, gestionnaires ou utilisateurs finals. Quand on évoque l'intervention d'utilisateurs dans un projet, on emploie souvent le terme générique de « participation ». En réalité, la nature et les modalités de participation peuvent présenter une grande variété et servir différents buts. Dans une perspective de pilotage de projet, on considère que la participation peut avoir un effet sur la détermination des besoins, sur le processus de décision ou sur une évolution organisationnelle.
+On peut alors distinguer 3 catégories des utilisateurs : 
+ 	L’utilisateur final est celui qui va utiliser les transactions et les éditions du futur système dans son travail au quotidien. C’est, par exemple, l’employé de l’agence bancaire qui se sert de son terminal pour effectuer les opérations avec la clientèle. La responsabilité attachée à ce rôle est d’exprimer des besoins et des contraintes liées au travail courant. 
+ 	L’utilisateur gestionnaire est un opérationnel qui a des responsabilités d’encadrement. Il utilisera le futur système pour obtenir des informations permettant de prendre des décisions de gestion. Par exemple, un responsable produit attendra des informations permettant de suivre une vente promotionnelle. La responsabilité attachée à ce rôle est d’exprimer des besoins en informations favorisant la gestion à moyen terme de l’activité.
+ 	L’utilisateur décideur a le pouvoir de modifier les règles du système de gestion, pour utiliser au mieux les possibilités technologiques. Sa responsabilité est de prendre des décisions sur l’évolution des règles de gestion.
+Ainsi la participation peut avoir pour objectif de transférer à l'équipe de projet une connaissance sur un domaine, un système de gestion, une organisation existante. La participation peut faciliter le processus de décision, en augmentant la visibilité des décideurs sur les enjeux et conséquences des décisions. Si les utilisateurs sont multiples, la prise de décisions passe par la construction d'un consensus. On peut citer à cet égard la technique JRP11. Enfin, la participation peut rechercher des décisions d'orientation et de poursuite du projet. Les utilisateurs.
+Visés sont des décideurs, et la poursuite du projet pourra dépendre de leur appréciation et de leur engagement. Cette participation se fait généralement à travers un comité de pilotage, mais elle peut être plus informelle.
+Prendre une décision, c’est souvent prendre un risque. Celui-ci est d’autant plus grand que les conséquences du choix se font sentir à moyen ou long terme. C’est pourquoi on observe parfois une réticence à s’engager. La participation permet de réduire cette crainte, en donnant aux décideurs une meilleure connaissance du projet et en offrant des possibilités d’échange et de discussion avec d’autres acteurs. La participation peut enfin faciliter l'utilisation du futur système par l'utilisateur final. 
+III.2.2. Présentation des besoins et exigences des utilisateurs
+C’est dans cette partie que nous allons présenter les besoins et exigences pour la transcription de cotes 
+1.	Acteur enseignant
+ 	Transcrire les cotes
+ 	Modifier les cotes
+ 	Afficher une cote
+ 	Afficher la ficher de cotation
+ 	Changer le mot de passe
+2.	Acteur étudiant
+ 	Consulter une cote
+ 	Consulter les résultats 
+ 	Saisir un recours
+3.	Acteur Jury
+ 	Afficher la fiche de cotation
+ 	Afficher la grille de délibération
+ 	Publier le résultat
+ 	Imprimer la fiche de cotation
+ 	Imprimer la grille de délibérations
+ 	Acteur Appariteur facultaire
+ 	Créer un profil enseignant
+ 	Modifier le profil d’utilisateur
+ 	Activer le profil d’utilisateur
+ 	Désactive le profil d’utilisateur
+ 	Afficher le profil d’utilisation 
+ 	Enregistre les cours 
+ 	Enregistre les étudiants
+ 	Affiche la liste des étudiants
+4.	Administrateur
+ 	Mettre à jour le système
+III.2.3. Les profils utilisateurs
+Les profils utilisateurs utilisant cette application, sont : 
+1.	Enseignant :
+Tous les enseignant doit d’abord s’authentifier dans le système avant de transmettre les cotes de le modifier, afficher une cote, afficher la fiche de cotation, changer le mot de passe (login et passwork)
+2.	Étudiants 
+Tous les étudiants doivent d’abord s’authentifier dans le système avant de consulter une cote, les résultats ou saisir un recours
+3.	Jury
+Les jurys doivent d’abord s’authentifier dans le système avant d’afficher la fiche de cotation, afficher la grille de délibération, publier les résultats, imprimer la fiche de cotation ou la grille de délibération.
+4.	Appariteur facultaire
+Ils doivent d’abord s’authentifier dans le système avant de créer un profil enseignant, de modifier le profil d’utilisateur, d’activer ou désactive l’utilisateur, afficher le profil d’utilisateur, enregistre les cours, enregistrer les étudiants et afficher la liste des étudiants
+5.	Administrateur
+Ils doivent d’abord s’authentifier dans les systèmes avant de mettre à jour ce système
+III.2.4. Dégagement des besoins du système
+Etant donné que, d’une manière abstraite, de données est déjà conçue, sa concrétisation est nécessaire. D’où, le choix des machines ne sera pas fait au hasard mais surtout il sera basé sur la masse ou le volume d’application et les logiciels qui peuvent les exploiter au besoin des utilisateurs.
+1. Besoins fonctionnels
+Le choix de langage de programmation dépend entre autre des paramètres de types de problème à résoudre.
+Le langage de programmation complète le SGBD par le fait qu’il permet une manipulation simple et facile de la base de données par ses utilisateurs.
+Ce choix du HTML 5, PHP 5, CSS, JavaScript, JQuery, Photoshop, Dreamweaver éprouve l’utilisation de système moderne pour la programmation des applications distribuées orientées web avec sa complexité et souplessité à la manipulation des données de la base de données MySQL.
+Par rapport aux SGBD, nous avons utilisé MySQL, parce qu’il peut bien gérer les transactions de plusieurs machines et des plusieurs serveurs sur le web, et il peut aussi bien assumer la compression des données dans le cas où ces dernières deviennent plus volumineuses.
+2. Besoins non fonctionnels 
+Pour utiliser cette application, il vous suffit d’avoir un ordinateur ou un téléphone capable de supporter un navigateur et la connexion internet et avoir un compte d’utilisateur et mot de passe.
+III.4. La fiche technique du projet 
+Phase 1 : Modélisation, Analyse, Conception et Développement du Logiciel
+Cette phase consiste au recensement les différentes tâches qui interviennent au processus de développement de l'application
+N°	Intitulé de la tâche	Durée (J)	Nbre  heure/J	Taux/ heure	Nbre personne	CT ($)
+T1	Cadrage des idées pour le projet	2	2	2	2	16
+T2	Elaboration du titre du projet	1	2	2	2	8
+T3	Constitution de l’équipe du projet	2	2	2	3	24
+T4	Prise de contact avec les autorités de l’institution	5	2	2,5	2	50
+T5	Elaboration du programme de travail	2	4	5	2	80
+T6	Spécification des besoins des utilisateurs	6	2	3	3	108
+T7	Analyse de besoins fonctionnels	2	3	2,5	3	45
+T8	Analyse de besoins matériels	2	3	2,5	3	45
+T9	Analyse de besoins logiciels	2	3	2,5	3	45
+T10	Analyse de besoins sécuritaire	3	2	3	4	72
+T11	La validation de besoins	2	2	2,5	2	20
+T12	la rédaction de cahier de charge	3	2	3,5	4	84
+T13	Conception architecturale	3	4	3	3	108
+T14	Conception des diagrammes	4	4	3	3	144
+T15	Installation des outils informatique	2	3	2,5	3	45
+T16	Implémentation de la base de données	4	3	3,5	3	126
+T17	Test de fonctionnalité et d’intégration de données	2	2	2,5	2	20
+T18	Création des interfaces graphiques de l’application	10	3	4	3	360
+T19	Création des algorithmes	6	3	5	3	270
+T20	Connexion des interfaces graphiques et la base de données	2	3	4	2	48
+T21	Test de connectivite et essaie technique	2	3	2,5	2	30
+T22	Achat matériels et logiciel	2	3	2	2	24
+T23	Rédaction de guide d’utilisation	2	3	2,5	3	45
+T24	Installation des matériels et logiciels	2	2	2,5	3	30
+T25	Déploiement de l’application dans le serveur distant	3	3	4	2	72
+T26	Test d’accès dans le serveur distant	2	3	3	2	36
+T27	Mise à jour du système	3	3	4	2	72
+T28	Livraison de portail web	1	1	3	2	6
+T29	Formation des utilisateurs	3	2	2,5	2	30
+TOTAL PHASE 1	 	 	 	 	2063
+
+Phase 2 : Acquisition et installation des matériels
+Nous allons décrire dans cette phase tous les matériels pour le déploiement de ce portail web
+N°	Matériel	Qté	CU (USD)	CT (USD)
+1	Ordinateur portable i7	2	800	1600
+2	Modem wifi 4G 	1	120	120
+3	Antivirus Kaspersky internet Security pour 4 machines	1	79	79
+4	Rallonge	1	5	5
+TOTAL PHASE 2	1804
+		
+
+
+
+
+Phase 3 : Hébergement du portail web et le provider
+N°	Désignation	Coût mensuel	Nombre  Site	Durée /mois	Coût total USD
+1	Serveur dédié sécurisé (le coût est annuel)	59,99	1	12	719,88
+3	connexion internet pour utilisateurs	100	1	12	1200
+TOTAL PHASE 3	1919,88
+
+Phase 4 : Formation des agents
+N°	Agent	Nombre/ agent	coût unitaire	Durée/Jour	Coût total USD
+1	Formateur des utilisateurs	2	15	5	150
+TOTAL PHASE 4	150
+
+Phase 5: Transport des équipements et formateurs
+N°	Description	Nombre	coût unitaire	Coût total USD
+1	Véhicule pour le transport des matériels	1	45	45
+TOTAL PHASE 5	45
+
+COUT GLOBAL DE LA FICHE TECHNIQUE DU PROJET
+N°	DESCRIPTION	Coût/USD
+1	Phase 1 : Modélisation, Analyse, Conception et Développement du Logiciel	2063
+2	Phase 2 : Acquisition et installation des matériels et logiciels	1804
+3	Phase 3 : Hébergement du portail web et le provider	1919,88
+4	Phase 4 : Formation des agents	150
+5	Phase 5: Transport des équipements et formateurs	45
+6	Imprévus (30%)	1 794,564
+COUT GLOBAL DU PROJET	7 776
+III.5. Conclusion partielle 
+Nous avons pris connaissance de l’université William Booth  en utilisant le processus unifié à l’analyse de besoins pour obtenir le modèle précis conçu, compréhensible et correct du monde visible et une vue exacte de l'état actuel du système, Il faut noter que la présentation des besoins et exigences des utilisateurs par rapport à la transcription de cotes présenté au niveau de cette étape nous a donné un premier aperçu sur l'application à concevoir, ouvrant ainsi la porte au quatrième chapitre du Processus Unifié intitulé « modélisation et développement de l’application », que nous allons détailler dans le prochain chapitre de notre mémoire.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

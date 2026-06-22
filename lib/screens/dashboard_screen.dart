@@ -141,7 +141,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(double.infinity, 54),
                     backgroundColor: AppConstants.secondaryColor,
-                    foregroundColor: Colors.black,
+                    foregroundColor: Colors.white,
                     elevation: 0,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   ),
@@ -266,9 +266,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           leading: Icon(
                             Icons.chat_outlined, 
                             size: 16, 
-                            color: isActive 
-                                ? (isDark ? AppConstants.secondaryColor : AppConstants.primaryColor) 
-                                : Colors.grey
+                            color: AppConstants.primaryColor, 
                           ),
                           title: Text(
                             title,

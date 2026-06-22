@@ -68,6 +68,17 @@ class ProfileView extends StatelessWidget {
                   email,
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
+                if (userProfile?['faculte'] != null || userProfile?['promotion'] != null) ...[
+                  const SizedBox(height: 8),
+                  Text(
+                    '${userProfile?['faculte'] ?? ''} - ${userProfile?['promotion'] ?? ''}',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: isDark ? Colors.white70 : Colors.grey[700],
+                    ),
+                  ),
+                ],
               ],
             ),
           ),
@@ -81,7 +92,7 @@ class ProfileView extends StatelessWidget {
             child: Text(
               role.toUpperCase(),
               style: const TextStyle(
-                color: Colors.brown, 
+                color: AppConstants.primaryColor, 
                 fontWeight: FontWeight.bold, 
                 fontSize: 12,
                 letterSpacing: 1.1,

@@ -138,6 +138,8 @@ class AppProvider with ChangeNotifier {
     required String password,
     required String fullName,
     required String role,
+    String? faculte,
+    String? promotion,
   }) async {
     setLoading(true);
     try {
@@ -147,6 +149,8 @@ class AppProvider with ChangeNotifier {
           password: password,
           fullName: fullName,
           role: role,
+          faculte: faculte,
+          promotion: promotion,
         );
         setLoading(false);
         return null;

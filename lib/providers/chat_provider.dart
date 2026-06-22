@@ -19,16 +19,11 @@ class ChatProvider with ChangeNotifier {
   }
 
   void _addInitialGreeting() {
-    if (_messages.isEmpty) {
-      _messages.add({
-        'role': 'assistant',
-        'content': 'Bonjour ! Je suis l\'assistant virtuel de l\'Université William Booth. Comment puis-je vous aider aujourd\'hui ?'
-      });
-      notifyListeners();
-    }
+    // La salutation initiale est maintenant gérée par l'interface centrée
+    // pour les nouvelles discussions.
   }
 
-  Future<void> sendMessage(String text, String role, String language) async {
+  Future<void> sendMessage(String text, String role, String language, {String? userName}) async {
     if (text.isEmpty) return;
 
     try {
@@ -47,7 +42,7 @@ class ChatProvider with ChangeNotifier {
       // On sauvegarde immédiatement le message utilisateur
       await _firebaseService.updateChatMessages(_currentChatId!, _messages);
 
-      final response = await _mistralService.sendMessage(text, role: role, language: language);
+      final response = await _mistralService.sendMessage(text, role: role, language: language, userName: userName);
 
       _messages.add({'role': 'assistant', 'content': response});
       
@@ -57,7 +52,7 @@ class ChatProvider with ChangeNotifier {
       print('Error in sendMessage: $e');
       _messages.add({
         'role': 'assistant', 
-        'content': 'Désolé, une erreur est survenue lors de l\'envoi du message.'
+        'content': 'Nous rencontrons actuellement une difficulté technique pour traiter votre demande. Veuillez réessayer dans quelques instants ou contacter le support si le problème persiste.'
       });
     } finally {
       _isLoading = false;
@@ -70,6 +65,7 @@ class ChatProvider with ChangeNotifier {
     _currentChatId = null;
     _mistralService.clearHistory();
     _addInitialGreeting();
+    notifyListeners();
   }
 
   void loadChat(String chatId, List<dynamic> messages) {
